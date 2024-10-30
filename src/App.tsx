@@ -11,10 +11,16 @@ function App() {
   const monthsHosting = yearsDiff * 12 + monthsDiff;
 
   const mainRef = useRef<HTMLElement>(null);
+  const formHeaderRef = useRef<HTMLHeadingElement>(null);
 
   const scrollToMain = () => {
     if (mainRef.current) {
       mainRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const scrollToForm = () => {
+    if (formHeaderRef.current) {
+      formHeaderRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -36,6 +42,9 @@ function App() {
           Enjoy the fully equipped kitchen, unwind in the modern shared living area, and indulge in
           the tranquility of the backyard deck. With easy access to local attractions and public
           transport, this is your ideal home base for exploring Auckland.
+        </p>
+        <p onClick={scrollToForm}>
+          ➡️ <span>Book direct & save!</span>
         </p>
         <h2>Your host</h2>
         <div className={styles.hostInfoContainer}>
@@ -74,6 +83,7 @@ function App() {
             </p>
           </div>
         </div>
+        <h1 ref={formHeaderRef}>Book direct and save!</h1>
         <p>
           You can book either via{" "}
           <a href="https://www.airbnb.co.nz/rooms/1022536520374354153">AirBnB</a>{" "}

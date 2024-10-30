@@ -35,7 +35,7 @@
 
 button {
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -65,7 +65,17 @@ main {
 }
 
 .description {
-  margin: 0.8rem 0 1.3rem 0;
+  margin: 0.8rem 0 0 0;
+}
+
+.description + p {
+  margin: 1.3rem 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.description + p > span {
+  text-decoration: underline;
 }
 
 /* ---------- HOST INFO ---------- */
@@ -218,6 +228,6 @@ main {
   }
 
   button {
-    top: 75%;
+    top: 70%;
   }
 }
