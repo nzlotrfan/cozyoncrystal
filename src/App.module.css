@@ -1,0 +1,222 @@
+/* ---------- TOP PART ---------- */
+.subContainer {
+  position: relative;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  background-color: #ffffffe1;
+}
+
+.overlay h1 {
+  font-size: 10rem;
+}
+
+.overlay p {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+button {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding: 2rem 5rem;
+  border-radius: 1rem;
+  border: solid 0.4rem rgb(252, 182, 90);
+  background-color: #ffffffbb;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border 0.3s;
+}
+
+button:hover {
+  transform: translate(-50%, -60%);
+  border: solid 0.4rem black;
+  background-color: rgb(255, 220, 174);
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+  padding: 0 5rem;
+  padding-top: 1rem;
+  height: 100%;
+}
+
+.description {
+  margin: 0.8rem 0 1.3rem 0;
+}
+
+/* ---------- HOST INFO ---------- */
+.hostInfoContainer {
+  display: flex;
+  border-bottom: solid 1px gray;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  min-width: 35rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 2rem;
+}
+
+/* Left side of host profile */
+.cardLeft,
+.cardRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.cardLeft p:first-of-type {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.cardLeft img {
+  width: 10.4rem;
+  border-radius: 50%;
+}
+
+.cardRight {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.cardReviews {
+  padding-top: 1rem;
+}
+
+.cardMonths {
+  padding-bottom: 1rem;
+}
+
+.cardRight > .cardRating {
+  border-top: solid 0.1rem gray;
+  border-bottom: solid 0.1rem gray;
+  padding: 1rem 0;
+}
+
+/* Right side of host profile */
+.aboutReuben {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 2rem;
+  padding: 0 1rem 0 4rem;
+}
+
+.aboutReuben ul {
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+/* FORM SECTION */
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.frame {
+  height: 145rem;
+  border: none;
+}
+
+@media only screen and (max-width: 112em) {
+  .overlay {
+    width: 60%;
+  }
+
+  .overlay h1 {
+    font-size: 7rem;
+  }
+
+  .overlay p {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 67.625em) {
+  .overlay {
+    width: 80%;
+  }
+
+  .overlay h1 {
+    font-size: 6rem;
+  }
+
+  .overlay p {
+    font-size: 1.6rem;
+  }
+  .hostInfoContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+@media only screen and (max-width: 44.5em) {
+  .overlay {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .overlay h1 {
+    font-size: 4rem;
+  }
+
+  .overlay p {
+    font-size: 1.4rem;
+  }
+
+  main {
+    padding: 0 2rem;
+  }
+
+  .aboutReuben {
+    padding: 2rem;
+  }
+
+  .frame {
+    height: 161rem;
+  }
+
+  button {
+    top: 75%;
+  }
+}
