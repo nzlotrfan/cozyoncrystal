@@ -93,6 +93,7 @@ main {
   min-width: 35rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 2rem;
+  padding: 2rem 0;
 }
 
 /* Left side of host profile */
