@@ -56,7 +56,7 @@ function App() {
             </div>
             <div className={styles.cardRight}>
               <div className={styles.cardReviews}>
-                <p>12</p>
+                <p>14</p>
                 <p>Reviews</p>
               </div>
               <div className={styles.cardRating}>
