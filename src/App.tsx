@@ -4,11 +4,12 @@ import reu from "./assets/reu.webp";
 import styles from "./App.module.css";
 
 function App() {
-  const start = new Date("11-12-2023");
+  const start = new Date("12-15-2023");
+
   const end = new Date();
-  const yearsDiff = end.getFullYear() - start.getFullYear();
-  const monthsDiff = end.getMonth() - start.getMonth();
-  const monthsHosting = yearsDiff * 12 + monthsDiff;
+  const yearsHosting = Math.round(
+    (end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24 * 365.25),
+  );
 
   const mainRef = useRef<HTMLElement>(null);
   const formHeaderRef = useRef<HTMLHeadingElement>(null);
@@ -56,7 +57,7 @@ function App() {
             </div>
             <div className={styles.cardRight}>
               <div className={styles.cardReviews}>
-                <p>16</p>
+                <p>18</p>
                 <p>Reviews</p>
               </div>
               <div className={styles.cardRating}>
@@ -64,22 +65,23 @@ function App() {
                 <p>Star Rating</p>
               </div>
               <div className={styles.cardMonths}>
-                <p>{monthsHosting}</p>
-                <p>Months Hosting</p>
+                <p>{yearsHosting}</p>
+                <p>Years Hosting</p>
               </div>
             </div>
           </div>
           <div className={styles.aboutReuben}>
             <ul>
               <li>Born in the 90s</li>
-              <li>Fun fact: I'm a jazz singer in my spare time!</li>
-              <li>Lives in Auckland, New Zealand</li>
               <li>My work: Web developer</li>
+              <li>Fun fact: I'm a jazz singer in my spare time!</li>
+              <li>Pets: A neighbourhood cat (he sleeps outside)</li>
               <li>Speaks English</li>
             </ul>
             <p>
               I am a kiwi who loves exploring, the Lord of the Rings, and meeting new people. I also
-              love jazz and classical music, as well as everything in-between.
+              love jazz and classical music, as well as everything in-between. I am also a part-time
+              student at AUT University in Auckland City.
             </p>
           </div>
         </div>

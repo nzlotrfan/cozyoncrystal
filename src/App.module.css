@@ -47,7 +47,11 @@ button {
   font-weight: 700;
   font-size: 2rem;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    background-color 0.3s,
+    border 0.3s;
 }
 
 button:hover {
@@ -127,6 +131,7 @@ main {
   gap: 1rem;
   flex: 1;
   padding-right: 1rem;
+  font-weight: 600;
 }
 
 .cardReviews {
